@@ -36,7 +36,7 @@ let questions = [
     }
 ];
 
-const CORRECT_BONUS = 10;
+const CORRECT_BONUS = 1;
 const MAX_QUESTIONS = 3;
 
 startGame = () => {
@@ -76,8 +76,21 @@ answers.forEach(answer => {
         acceptingAnswers = false;
         const selectedAnswer = e.target;
         const selectedCorrectAnswer = selectedAnswer.dataset["number"];
+
+        const classToApply = 
+        selectedCorrectAnswer == currentQuestion.answer ? "correct" : "incorrect";
+
+        if(classToApply === 'correct') {
+            incrementScore(CORRECT_BONUS);
+        }
+
         getNewQuestion();
     });
 });
+
+incrementScore = num => {
+    score += num;
+    scoreText.innerText = score;
+}
 
 startGame();
