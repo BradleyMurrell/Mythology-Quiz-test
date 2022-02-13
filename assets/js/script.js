@@ -1,5 +1,7 @@
 const question = document.getElementById("question");
 const answers = Array.from(document.getElementsByClassName("answer"));
+const questionCounterText = document.getElementById('questionCounter');
+const scoreText = document.getElementById('score');
 
 let currentQuestion = {};
 let acceptingAnswers = false;
