@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Fira+Sans+Condensed&family=Heebo&display=swap');
+
 body {
     padding: 0;
     margin: 0;
@@ -17,4 +19,10 @@ body {
     padding: 10px;
     box-shadow: 0 0 10px 2px;
     text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    font-family: 'Abel', sans-serif;
+    color: #474073;
 }
