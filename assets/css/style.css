@@ -24,13 +24,13 @@ body {
 h1 {
     font-size: 3rem;
     font-family: 'Abel', sans-serif;
-    color: #474073;
+    color: #2E4159;
 }
 
 #question {
     font-size: 2rem;
     font-family: 'Fira Sans Condensed', sans-serif;
-    color: #474073;
+    color: #2E4159;
 }
 
 .answer {
@@ -38,10 +38,23 @@ h1 {
     padding: 1rem;
     width: 20rem;
     text-align: center;
-    border: 0.1rem solid #474073;
+    border: 0.1rem solid #2E4159;
     margin-bottom: 1rem;
     text-decoration: none;
-    color: #474073;
+    color: #2E4159;
     background-color: #F2F2F2;
     border-radius: 5px;
+}
+
+.answer:hover {
+    cursor: pointer;
+    background-color: #8F8EBF;
+}
+
+#answer-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
 }
