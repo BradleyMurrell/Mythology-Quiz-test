@@ -2,7 +2,7 @@ const question = document.getElementById("question");
 const answers = Array.from(document.getElementsByClassName("answer"));
 
 let currentQuestion = {};
-let acceptingAnswers = true;
+let acceptingAnswers = false;
 let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
@@ -51,6 +51,15 @@ getNewQuestion = () => {
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionIndex];
     question.innerText = currentQuestion.question;
+
+answers.forEach( answer => {
+    const number = answer.dataset['number'];
+    answer.innerText = currentQuestion['answer' + number];
+});
+
+availableQuestions.splice(questionIndex, 1);
+
+acceptingAnswers = true;
 };
 
 startGame();
