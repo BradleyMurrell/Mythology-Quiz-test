@@ -44,6 +44,7 @@ h1 {
     color: #2E4159;
     background-color: #F2F2F2;
     border-radius: 5px;
+    font-family: 'Heebo', sans-serif;
 }
 
 .answer:hover {
