@@ -67,3 +67,13 @@ h1 {
 .incorrect {
     background-color: #F0C7D0;
 }
+
+#information {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1rem;
+    color: #2E4159;
+    font-family: 'Heebo', sans-serif;
+}

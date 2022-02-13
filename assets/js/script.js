@@ -72,12 +72,7 @@ answers.forEach(answer => {
         acceptingAnswers = false;
         const selectedAnswer = e.target;
         const selectedCorrectAnswer = selectedAnswer.dataset["number"];
-
-        const classToApply =
-         selectedCorrectAnswer == currentQuestion.answer ? "correct" : "incorrect";
-         console.log(classToApply);
-
-            getNewQuestion();
+        getNewQuestion();
     });
 });
 
