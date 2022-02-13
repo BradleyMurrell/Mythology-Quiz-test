@@ -26,7 +26,7 @@ let questions = [
     },
     {
         question: "In Greek mythology, who is the god of wine?",
-        answers1: "Dionysus",
+        answer1: "Dionysus",
         answer2: "Hephaestus",
         answer3: "Demeter",
         answer4: "Apollo",
@@ -42,6 +42,15 @@ startGame = () => {
     score = 0;
     availableQuestions = [...questions];
     console.log(availableQuestions);
-}
+    getNewQuestion();
+};
+
+getNewQuestion = () => {
+
+    questionCounter++;
+    const questionIndex = Math.floor(Math.random() * availableQuestions.length);
+    currentQuestion = availableQuestions[questionIndex];
+    question.innerText = currentQuestion.question;
+};
 
 startGame();
