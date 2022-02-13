@@ -62,4 +62,10 @@ availableQuestions.splice(questionIndex, 1);
 acceptingAnswers = true;
 };
 
+answers.forEach(answer => {
+    answer.addEventListener("click", e => {
+        console.log(e.target);
+    });
+});
+
 startGame();
