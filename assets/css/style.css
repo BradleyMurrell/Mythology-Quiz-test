@@ -60,14 +60,6 @@ h1 {
     padding: 3rem;
 }
 
-.correct {
-    background-color: #EDFFF0;
-}
-
-.incorrect {
-    background-color: #F0C7D0;
-}
-
 #information {
     display: flex;
     flex-direction: row;
@@ -96,12 +88,4 @@ h1 {
 .button:hover {
     cursor: pointer;
     background-color: #8F8EBF;
-}
-
-#end {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 3rem;
 }
