@@ -1,13 +1,19 @@
-const question = document.getElementById("question");
-const answers = Array.from(document.getElementsByClassName("answer"));
-const questionCounterText = document.getElementById('questionCounter');
-const scoreText = document.getElementById('score');
+const question = document.querySelector("#question");
+const answers = Array.from(document.querySelectorAll(".answer"));
+const questionCounterText = document.querySelector('#questionCounter');
+const scoreText = document.querySelector('#score');
+const scoreBtnRef = document.querySelector('#saveScore');
+const usernameRef = document.querySelector('#username');
+const finalScoreRef = document.querySelector('#finalScore');
 
 let currentQuestion = {};
 let acceptingAnswers = false;
 let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
+
+const CORRECT_BONUS = 1;
+const MAX_QUESTIONS = 10;
 
 let questions = [];
 
@@ -43,9 +49,6 @@ fetch(
         console.error(err);
     });
 
-const CORRECT_BONUS = 1;
-const MAX_QUESTIONS = 10;
-
 startGame = () => {
     questionCounter = 0;
     score = 0;
@@ -60,15 +63,21 @@ getNewQuestion = () => {
     };
 
     questionCounter++;
-    questionCounterText.innerText = `${questionCounter}/${MAX_QUESTIONS}`;
+    if(questionCounterText){
+    questionCounterText.innerHTML = `${questionCounter}/${MAX_QUESTIONS}`;
+    }
 
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionIndex];
-    question.innerText = currentQuestion.question;
+    if(question){
+        question.innerHTML = currentQuestion.question;
+    }
 
 answers.forEach( answer => {
     const number = answer.dataset['number'];
-    answer.innerText = currentQuestion['answer' + number];
+    if(answer){
+        answer.innerHTML = currentQuestion['answer' + number];
+    }
 });
 
 availableQuestions.splice(questionIndex, 1);
@@ -98,4 +107,20 @@ answers.forEach(answer => {
 incrementScore = num => {
     score += num;
     scoreText.innerText = score;
+    localStorage.setItem('mostRecentScore', score)
 }
+
+if(scoreBtnRef){
+    scoreBtnRef.disabled = false
+    scoreBtnRef.addEventListener('submit', saveScore)
+};
+
+if(finalScoreRef){
+    finalScoreRef.innerHTML = localStorage.getItem("mostRecentScore") || 0
+}
+
+function saveScore(event){
+    event.preventDefault()
+    localStorage.setItem("savedUsername", usernameRef.value)
+    scoreBtnRef.disabled = true
+};

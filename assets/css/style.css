@@ -117,3 +117,7 @@ form {
     justify-content: center;
     align-items: center;
   }
+
+  #saveScoreBtn:disabled {
+      background-color: aquamarine;
+  }
