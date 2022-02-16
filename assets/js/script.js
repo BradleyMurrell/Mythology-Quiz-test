@@ -60,7 +60,7 @@ getNewQuestion = () => {
 
     if(availableQuestions.length == 0 || questionCounter >= MAX_QUESTIONS) {
         return window.location.assign("/end.html");
-    };
+    }
 
     questionCounter++;
     if(questionCounterText){
@@ -107,20 +107,20 @@ answers.forEach(answer => {
 incrementScore = num => {
     score += num;
     scoreText.innerText = score;
-    localStorage.setItem('mostRecentScore', score)
-}
-
-if(scoreBtnRef){
-    scoreBtnRef.disabled = false
-    scoreBtnRef.addEventListener('submit', saveScore)
+    localStorage.setItem('mostRecentScore', score);
 };
 
+if(scoreBtnRef){
+    scoreBtnRef.disabled = false;
+    scoreBtnRef.addEventListener('submit', saveScore);
+}
+
 if(finalScoreRef){
-    finalScoreRef.innerHTML = localStorage.getItem("mostRecentScore") || 0
+    finalScoreRef.innerHTML = localStorage.getItem("mostRecentScore") || 0;
 }
 
 function saveScore(event){
-    event.preventDefault()
-    localStorage.setItem("savedUsername", usernameRef.value)
-    scoreBtnRef.disabled = true
-};
+    event.preventDefault();
+    localStorage.setItem("savedUsername", usernameRef.value);
+    scoreBtnRef.disabled = true;
+}
