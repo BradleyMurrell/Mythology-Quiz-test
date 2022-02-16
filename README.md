@@ -12,6 +12,8 @@
 
 # Colors used
 
+<img src="assets/images/AdobeColor-Wilderness.jpeg">
+
 # Testing
 
 * I tested that this page works in different browsers: Chrome, Firefox, Microsoft Edge.
