@@ -28,12 +28,6 @@ h1 {
     color: #2E4159;
 }
 
-h2 {
-    font-size: 2.8rem;
-    font-family: 'Abel', sans-serif;
-    color: #2E4159;
-}
-
 #question {
     font-size: 1.8rem;
     font-family: 'Fira Sans Condensed', sans-serif;
@@ -76,6 +70,12 @@ h2 {
     font-size: 1rem;
     color: #2E4159;
     font-family: 'Heebo', sans-serif;
+}
+
+#finalScore {
+    font-size: 2.8rem;
+    font-family: 'Abel', sans-serif;
+    color: #2E4159;
 }
 
 form {
