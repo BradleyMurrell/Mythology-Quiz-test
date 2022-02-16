@@ -106,7 +106,8 @@
 ## For help, advice and inspiration
 
 * Simen Daehlin (Mentor)
-* James Q Quick (YouTube)
+* James Q Quick (YouTube Tutorial)
+  * I have used code from the tutorial to help me along and changing it where necessary
 
 ## Content
 
