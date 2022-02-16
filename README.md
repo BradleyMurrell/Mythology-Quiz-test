@@ -59,6 +59,8 @@
 * I tested that this page works in different browsers: Chrome, Firefox, Microsoft Edge.
 * I confirmed that this project is responsive, looks good and functions on all standard screen sizes using the devtools device toolbar.
 
+<img src="assets/images/lighthouse.png">
+
 ## Validator Testing
 
 * HTML
