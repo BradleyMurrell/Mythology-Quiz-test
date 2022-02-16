@@ -2,7 +2,7 @@
 
 ## Summary
 
-### The Greek Mythology Quiz tests the user on their knowledge of Greek mythology. The user is given a series of multiple choice questions with the option to choose from one of four answers. The results are then tallied which shows the user how many questions they have answered correctly which is displayed under the questions.
+### The Mythology Quiz tests the user on their knowledge of mythology from different cultures. The user is given ten multiple choice questions with the option to choose from one of four answers. The results are tallied and shows the user how many questions they have answered correctly which is displayed under the questions and a final score when the quiz is completed.
 
 ### The user can create a username and can retake the quiz as many times as they like. The questions are displayed in random order so that each time the quiz is taken, the questions are not in the same order as the last.
 
