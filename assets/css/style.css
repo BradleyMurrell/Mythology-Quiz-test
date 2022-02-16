@@ -65,7 +65,7 @@ h1 {
     flex-direction: row;
     justify-content: space-around;
     align-items: end;
-    padding: auto;
+    padding: 2rem;
     font-size: 1rem;
     color: #2E4159;
     font-family: 'Heebo', sans-serif;
